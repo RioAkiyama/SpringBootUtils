@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.rio.aki.CommandHandler"
+            commandId="CommandHandler">
+      </handler>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+		    allPopups="false"
+		    locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+		　　<command commandId="CommandHandler"
+	        label="SpringBootUtils" style="push" mnemonic="L">
+	        <visibleWhen>
+               <with variable="selection">
+				   <iterate
+				         ifEmpty="false">
+				      <adapt
+				            type="org.eclipse.jdt.core.ICompilationUnit">
+				      </adapt>
+				   </iterate>
+				</with>
+            </visibleWhen>
+	      </command>
+　　　　　</menuContribution>
+   </extension>
+
+</plugin>

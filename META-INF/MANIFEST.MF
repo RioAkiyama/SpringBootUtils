@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: WebAppDevHelper
+Bundle-SymbolicName: SpringBootUtils;singleton:=true
+Bundle-Version: 1.0.1
+Bundle-Vendor: com.rio.aki
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.jdt.core,
+ org.eclipse.equinox.registry,
+ org.eclipse.core.resources
+Automatic-Module-Name: WebAppDevHelper
+Bundle-RequiredExecutionEnvironment: JavaSE-17
